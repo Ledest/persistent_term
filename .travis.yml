@@ -4,15 +4,16 @@ notifications:
 otp_release:
   - 21.1
   - 20.3.8
-  - 19.3.6
 matrix:
   include:
+  - otp_release: 19.3.6
+    dist: trusty
   - otp_release: 18.3
     dist: trusty
   - otp_release: 17.5
-    dist: trusty
+    dist: precise
   - otp_release: R16B03-1
-    dist: trusty
+    dist: precise
   - otp_release: R15B03
-    dist: trusty
+    dist: precise
 script: rebar compile && rebar eunit
